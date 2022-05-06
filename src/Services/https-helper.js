@@ -32,7 +32,7 @@ const postBlog = async (formDetails, dispatch) => {
 }
 const deleteBlog = async (id, dispatch) => {
     try {
-        const data = await axios.delete(`https://crudcrud.com/api/bcd89d3386024841b4ae36247ec040d5/blog/${id}`)
+        await axios.delete(`https://crudcrud.com/api/bcd89d3386024841b4ae36247ec040d5/blog/${id}`)
         dispatch({ type: "DELETE_BLOG", payload: id })
         toast.success(<p>Blog Deleted.</p>)
     } catch (error) {
@@ -41,7 +41,7 @@ const deleteBlog = async (id, dispatch) => {
 }
 const editBlog = async (id, formDetails, dispatch) => {
     try {
-        const data = await axios.put(`https://crudcrud.com/api/bcd89d3386024841b4ae36247ec040d5/blog/${id}`, {
+        await axios.put(`https://crudcrud.com/api/bcd89d3386024841b4ae36247ec040d5/blog/${id}`, {
             "title": formDetails.title,
             "content": formDetails.content,
             "date": new Date().toLocaleDateString(),

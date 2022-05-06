@@ -5,7 +5,7 @@ const BlogCard = ({ data }) => {
     return (
         <div className='bg-indigo-50 p-0 lg:p-8 pb-12 mb-8'>
             <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
-                <img className='object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg' src={data.image} />
+                <img className='object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg' src={data.image} alt={data.title} />
             </div>
             <h1 className=' text-center mb-8 cursor-pointer text-3xl font-semibold hover:text-sky-400'>{data.title}</h1>
             <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>

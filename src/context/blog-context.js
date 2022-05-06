@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useEffect, useContext, useReducer } from "react";
 import { blogReducer } from "reducer/blogReducer";
 import { fetchBlogs } from "Services/https-helper";
